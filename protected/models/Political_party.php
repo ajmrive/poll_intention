@@ -8,16 +8,17 @@
  * @property string $Name
  * @property integer $Members
  * @property string $Slogan
+ * @property integer $Status
  *
  * The followings are the available model relations:
  * @property TblResponse[] $tblResponses
  */
-class Political_party extends CActiveRecord
+class political_party extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Political_party the static model class
+	 * @return political_party the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -41,11 +42,11 @@ class Political_party extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('Name, Members', 'required'),
-			array('Members', 'numerical', 'integerOnly'=>true),
+			array('Members, Status', 'numerical', 'integerOnly'=>true),
 			array('Name, Slogan', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, Name, Members, Slogan', 'safe', 'on'=>'search'),
+			array('id, Name, Members, Slogan, Status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,6 +72,7 @@ class Political_party extends CActiveRecord
 			'Name' => 'Name',
 			'Members' => 'Members',
 			'Slogan' => 'Slogan',
+			'Status' => 'Status',
 		);
 	}
 
@@ -89,6 +91,7 @@ class Political_party extends CActiveRecord
 		$criteria->compare('Name',$this->Name,true);
 		$criteria->compare('Members',$this->Members);
 		$criteria->compare('Slogan',$this->Slogan,true);
+		$criteria->compare('Status',$this->Status);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

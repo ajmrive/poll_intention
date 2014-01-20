@@ -1,6 +1,6 @@
 <?php
 /* @var $this Political_partyController */
-/* @var $model Political_party */
+/* @var $model political_party */
 
 $this->breadcrumbs=array(
 	'Political Parties'=>array('index'),
@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Political_party', 'url'=>array('index')),
-	array('label'=>'Create Political_party', 'url'=>array('create')),
+	array('label'=>'List political_party', 'url'=>array('index')),
+	array('label'=>'Create political_party', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -49,6 +49,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'Name',
 		'Members',
 		'Slogan',
+		'Status',
 		array(
 			'class'=>'CButtonColumn',
 		),

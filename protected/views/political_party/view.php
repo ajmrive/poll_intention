@@ -1,6 +1,6 @@
 <?php
 /* @var $this Political_partyController */
-/* @var $model Political_party */
+/* @var $model political_party */
 
 $this->breadcrumbs=array(
 	'Political Parties'=>array('index'),
@@ -8,15 +8,16 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Political_party', 'url'=>array('index')),
-	array('label'=>'Create Political_party', 'url'=>array('create')),
-	array('label'=>'Update Political_party', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Political_party', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Political_party', 'url'=>array('admin')),
+	array('label'=>'List political_party', 'url'=>array('index')),
+	array('label'=>'Create political_party', 'url'=>array('create')),
+	array('label'=>'Update political_party', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Delete political_party', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage political_party', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Political_party #<?php echo $model->id; ?></h1>
+<h1>View <?php echo $model->Name; ?></h1>
+<h2>"<?php echo $model->Slogan; ?>"</h2>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -25,5 +26,6 @@ $this->menu=array(
 		'Name',
 		'Members',
 		'Slogan',
+		'Status',
 	),
 )); ?>

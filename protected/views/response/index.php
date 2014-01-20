@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Response', 'url'=>array('create')),
-	array('label'=>'Manage Response', 'url'=>array('admin')),
+	array('label'=>'Create response', 'url'=>array('create')),
+	array('label'=>'Manage response', 'url'=>array('admin')),
 );
 ?>
 

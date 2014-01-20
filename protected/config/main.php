@@ -11,7 +11,7 @@ return array(
         'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
     
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Poll intention',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -49,7 +49,7 @@ return array(
                     'class'=>'bootstrap.components.Bootstrap',
                 ),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
@@ -58,13 +58,14 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
+		
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
 		// uncomment the following to use a MySQL database
 		
-		'db'=>array(
+
+                'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=poll_intention',
 			'emulatePrepare' => true,
 			'username' => 'root',

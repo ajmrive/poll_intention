@@ -1,6 +1,6 @@
 <?php
 /* @var $this ResponseController */
-/* @var $model Response */
+/* @var $model response */
 
 $this->breadcrumbs=array(
 	'Responses'=>array('index'),
@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Response', 'url'=>array('index')),
-	array('label'=>'Create Response', 'url'=>array('create')),
-	array('label'=>'View Response', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Response', 'url'=>array('admin')),
+	array('label'=>'List response', 'url'=>array('index')),
+	array('label'=>'Create response', 'url'=>array('create')),
+	array('label'=>'View response', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage response', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Response <?php echo $model->id; ?></h1>
+<h1>Update response <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

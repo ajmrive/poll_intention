@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Political_party', 'url'=>array('create')),
-	array('label'=>'Manage Political_party', 'url'=>array('admin')),
+	array('label'=>'Create political_party', 'url'=>array('create')),
+	array('label'=>'Manage political_party', 'url'=>array('admin')),
 );
 ?>
 

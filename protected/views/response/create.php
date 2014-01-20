@@ -1,6 +1,6 @@
 <?php
 /* @var $this ResponseController */
-/* @var $model Response */
+/* @var $model response */
 
 $this->breadcrumbs=array(
 	'Responses'=>array('index'),
@@ -8,11 +8,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Response', 'url'=>array('index')),
-	array('label'=>'Manage Response', 'url'=>array('admin')),
+	array('label'=>'List response', 'url'=>array('index')),
+	array('label'=>'Manage response', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Response</h1>
+<h1>Create response</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array(
+    'model'=>$model,
+    'districts'=>$districts,
+    'political_party'=>$political_party   ));
+?>

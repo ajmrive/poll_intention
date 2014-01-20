@@ -1,6 +1,6 @@
 <?php
-/* @var $this Political_partyController */
-/* @var $data political_party */
+/* @var $this DistrictController */
+/* @var $data district */
 ?>
 
 <div class="view">
@@ -13,12 +13,8 @@
 	<?php echo CHtml::encode($data->Name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Members')); ?>:</b>
-	<?php echo CHtml::encode($data->Members); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Slogan')); ?>:</b>
-	<?php echo CHtml::encode($data->Slogan); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Population')); ?>:</b>
+	<?php echo CHtml::encode($data->Population); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Status')); ?>:</b>

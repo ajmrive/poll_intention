@@ -62,14 +62,14 @@ class Political_partyController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Political_party;
+		$model=new political_party;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Political_party']))
+		if(isset($_POST['political_party']))
 		{
-			$model->attributes=$_POST['Political_party'];
+			$model->attributes=$_POST['political_party'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -91,9 +91,9 @@ class Political_partyController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Political_party']))
+		if(isset($_POST['political_party']))
 		{
-			$model->attributes=$_POST['Political_party'];
+			$model->attributes=$_POST['political_party'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,7 +122,7 @@ class Political_partyController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Political_party');
+		$dataProvider=new CActiveDataProvider('political_party');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class Political_partyController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Political_party('search');
+		$model=new political_party('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Political_party']))
-			$model->attributes=$_GET['Political_party'];
+		if(isset($_GET['political_party']))
+			$model->attributes=$_GET['political_party'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -150,7 +150,7 @@ class Political_partyController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Political_party::model()->findByPk($id);
+		$model=political_party::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

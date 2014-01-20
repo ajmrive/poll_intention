@@ -1,6 +1,6 @@
 <?php
 /* @var $this Political_partyController */
-/* @var $model Political_party */
+/* @var $model political_party */
 
 $this->breadcrumbs=array(
 	'Political Parties'=>array('index'),
@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Political_party', 'url'=>array('index')),
-	array('label'=>'Create Political_party', 'url'=>array('create')),
-	array('label'=>'View Political_party', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Political_party', 'url'=>array('admin')),
+	array('label'=>'List political_party', 'url'=>array('index')),
+	array('label'=>'Create political_party', 'url'=>array('create')),
+	array('label'=>'View political_party', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage political_party', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Political_party <?php echo $model->id; ?></h1>
+<h1>Update political_party <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

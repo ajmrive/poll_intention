@@ -4,19 +4,20 @@
  * This is the model class for table "tbl_district".
  *
  * The followings are the available columns in table 'tbl_district':
- * @property string $id
+ * @property integer $id
  * @property string $Name
  * @property string $Population
+ * @property integer $Status
  *
  * The followings are the available model relations:
  * @property TblResponse[] $tblResponses
  */
-class District extends CActiveRecord
+class district extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return District the static model class
+	 * @return district the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -39,13 +40,13 @@ class District extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, Name, Population', 'required'),
-			array('id', 'length', 'max'=>5),
+			array('Name, Population', 'required'),
+			array('Status', 'numerical', 'integerOnly'=>true),
 			array('Name', 'length', 'max'=>45),
 			array('Population', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, Name, Population', 'safe', 'on'=>'search'),
+			array('id, Name, Population, Status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +71,7 @@ class District extends CActiveRecord
 			'id' => 'ID',
 			'Name' => 'Name',
 			'Population' => 'Population',
+			'Status' => 'Status',
 		);
 	}
 
@@ -84,9 +86,10 @@ class District extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('Name',$this->Name,true);
 		$criteria->compare('Population',$this->Population,true);
+		$criteria->compare('Status',$this->Status);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

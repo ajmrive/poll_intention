@@ -1,6 +1,6 @@
 <?php
-/* @var $this Political_partyController */
-/* @var $model political_party */
+/* @var $this DistrictController */
+/* @var $model district */
 /* @var $form CActiveForm */
 ?>
 
@@ -22,13 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Members'); ?>
-		<?php echo $form->textField($model,'Members'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'Slogan'); ?>
-		<?php echo $form->textField($model,'Slogan',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'Population'); ?>
+		<?php echo $form->textField($model,'Population',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
 
 	<div class="row">

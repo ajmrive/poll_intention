@@ -1,6 +1,6 @@
 <?php
 /* @var $this ResponseController */
-/* @var $data Response */
+/* @var $data response */
 ?>
 
 <div class="view">
@@ -13,12 +13,12 @@
 	<?php echo CHtml::encode($data->Intention); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('district_id')); ?>:</b>
-	<?php echo CHtml::encode($data->district_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('political_party_id')); ?>:</b>
 	<?php echo CHtml::encode($data->political_party_id); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('district_id')); ?>:</b>
+	<?php echo CHtml::encode($data->district_id); ?>
 	<br />
 
 

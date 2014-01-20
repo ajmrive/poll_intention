@@ -1,6 +1,6 @@
 <?php
 /* @var $this ResponseController */
-/* @var $model Response */
+/* @var $model response */
 /* @var $form CActiveForm */
 ?>
 
@@ -22,13 +22,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'district_id'); ?>
-		<?php echo $form->textField($model,'district_id',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->label($model,'political_party_id'); ?>
+		<?php echo $form->textField($model,'political_party_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'political_party_id'); ?>
-		<?php echo $form->textField($model,'political_party_id'); ?>
+		<?php echo $form->label($model,'district_id'); ?>
+		<?php echo $form->textField($model,'district_id'); ?>
 	</div>
 
 	<div class="row buttons">

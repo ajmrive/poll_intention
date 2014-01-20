@@ -1,13 +1,13 @@
 <?php
-/* @var $this Political_partyController */
-/* @var $model political_party */
+/* @var $this DistrictController */
+/* @var $model district */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'political-party-form',
+	'id'=>'district-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -22,15 +22,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Members'); ?>
-		<?php echo $form->textField($model,'Members'); ?>
-		<?php echo $form->error($model,'Members'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'Slogan'); ?>
-		<?php echo $form->textField($model,'Slogan',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'Slogan'); ?>
+		<?php echo $form->labelEx($model,'Population'); ?>
+		<?php echo $form->textField($model,'Population',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'Population'); ?>
 	</div>
 
 	<div class="row">
